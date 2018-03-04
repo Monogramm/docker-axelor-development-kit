@@ -10,7 +10,9 @@ USER root
 # Get axelor-development-kit
 RUN set -o errexit -o nounset ; \
 	echo "Installing needed packages"; \
-	apk add --no-cache tar bash; \
+	apt-get install -y --no-install-recommends tar bash; \
+	\
+	rm -rf /var/lib/apt/lists/*; \
 	\
 	echo "Downloading Axelor Development Kit"; \
 	wget -O adk.tar.gz https://github.com/axelor/axelor-development-kit/archive/v${ADK_VERSION}.tar.gz; \
