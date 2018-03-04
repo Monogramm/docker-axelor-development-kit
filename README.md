@@ -24,7 +24,7 @@ https://hub.docker.com/r/monogramm/docker-axelor-development-kit/
 
 ## How to use this image ?
 
-This image is based on the [official Gradle:alpine repository](https://hub.docker.com/_/gradle/).
+This image is based on the [official Gradle repository](https://hub.docker.com/_/gradle/).
 
 This image is designed to be used as a base container for building Axelor applications.
 

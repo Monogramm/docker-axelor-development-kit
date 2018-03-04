@@ -1,4 +1,4 @@
-FROM gradle:jdk-alpine
+FROM gradle:jdk
 
 LABEL maintainer="Mathieu BRUNOT <mathieu.brunot@monogramm.io>"
 
