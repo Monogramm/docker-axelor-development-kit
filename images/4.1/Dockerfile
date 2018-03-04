@@ -3,6 +3,7 @@ FROM gradle:jdk-alpine
 LABEL maintainer="Mathieu BRUNOT <mathieu.brunot@monogramm.io>"
 
 ENV ADK_VERSION 4.1.8
+ENV AXELOR_HOME /opt/adk
 
 # Switch to root
 USER root
@@ -24,7 +25,6 @@ RUN set -o errexit -o nounset ; \
 	./gradlew build; \
 	\
 	echo "Installing Axelor Development Kit"; \
-	export AXELOR_HOME=/opt/adk; \
 	tar -xzf "/usr/src/adk/build/distributions/axelor-development-kit-${ADK_VERSION}.tgz"; \
 	mv "axelor-development-kit-${ADK_VERSION}" "${AXELOR_HOME}"; \
 	chown -R gradle "${AXELOR_HOME}/"; \
