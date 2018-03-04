@@ -32,6 +32,9 @@ You can build your own Dockerfile on top of this one and build your application 
 ```yaml
 FROM monogramm/docker-axelor-development-kit
 
+# Lost from previous image but mandatory for ADK
+ENV AXELOR_HOME /opt/adk
+
 COPY ./app .
 RUN axelor build
 
