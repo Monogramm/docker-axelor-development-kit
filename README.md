@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/monogramm/docker-axelor-development-kit.svg)](https://travis-ci.org/monogramm/docker-axelor-development-kit)
+[![Build Status](https://travis-ci.org/Monogramm/docker-axelor-development-kit.svg)](https://travis-ci.org/Monogramm/docker-axelor-development-kit)
 
 **This container is still in development and shouldn't be considered production ready!**
 
@@ -19,8 +19,6 @@ Axelor Development Kit (ADK) is an open source Java framework to create modern b
 https://hub.docker.com/r/monogramm/docker-axelor-development-kit/
 
 * `4.1.8` `4.1` `4` `latest`
-* `3.4.2` `3.4` `3`
-* `3.3.5` `3.3`
 
 ## How to use this image ?
 
