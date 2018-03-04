@@ -29,7 +29,7 @@ for latest in "${latests[@]}"; do
 	fi
 
 	# Only add versions >= 4.0
-	if version_greater_or_equal "$version" "4.0"; then
+	if version_greater_or_equal "$version" "3.2"; then
 
 		echo "updating $latest [$version]"
 
@@ -44,12 +44,6 @@ for latest in "${latests[@]}"; do
 		sed -ri -e '
 			s/%%ADK_VERSION%%/'"$latest"'/g;
 		' "$dir/Dockerfile"
-
-		# Copy the shell scripts
-		for name in entrypoint; do
-			cp "docker-$name.sh" "$dir/$name.sh"
-			chmod 755 "$dir/$name.sh"
-		done
 
 		travisEnv='\n    - VERSION='"$version$travisEnv"
 
