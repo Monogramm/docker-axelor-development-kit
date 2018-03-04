@@ -1,4 +1,4 @@
-FROM gradle:jdk
+FROM gradle:jdk-alpine
 
 LABEL maintainer="Mathieu BRUNOT <mathieu.brunot@monogramm.io>"
 
@@ -10,9 +10,7 @@ USER root
 # Get axelor-development-kit
 RUN set -o errexit -o nounset ; \
 	echo "Installing needed packages"; \
-	apt-get install -y --no-install-recommends tar bash; \
-	\
-	rm -rf /var/lib/apt/lists/*; \
+	apk add --no-cache tar bash; \
 	\
 	echo "Downloading Axelor Development Kit"; \
 	wget -O adk.tar.gz https://github.com/axelor/axelor-development-kit/archive/v${ADK_VERSION}.tar.gz; \

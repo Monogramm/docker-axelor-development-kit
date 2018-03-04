@@ -12,7 +12,11 @@ dockerRepo="monogramm/docker-axelor-development-kit"
 # latests=( $( curl -fsSL 'https://api.github.com/repos/axelor/axelor-development-kit/tags' |tac|tac| \
 # 	grep -oE '[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+' | \
 # 	sort -urV ) )
-latests=( "3.3.5" "3.4.2" "4.1.8" )
+latests=( "4.1.8" )
+
+# FIXME Remove versions prior to 4.0 due to following error:
+# Could not find org.apache.directory.jdbm:apacheds-jdbm1:2.0.0-M3-SNAPSHOT.
+# Required by: com.axelor:axelor-core:3.4.2
 
 
 # Remove existing images
@@ -29,7 +33,7 @@ for latest in "${latests[@]}"; do
 	fi
 
 	# Only add versions >= 4.0
-	if version_greater_or_equal "$version" "3.2"; then
+	if version_greater_or_equal "$version" "4.0"; then
 
 		echo "updating $latest [$version]"
 
