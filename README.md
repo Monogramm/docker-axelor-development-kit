@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/Monogramm/docker-axelor-development-kit.svg)](https://travis-ci.org/Monogramm/docker-axelor-development-kit)
+[![Docker Automated buid](https://img.shields.io/docker/build/monogramm/docker-axelor-development-kit.svg)](https://hub.docker.com/r/monogramm/docker-axelor-development-kit/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/monogramm/docker-axelor-development-kit.svg)](https://hub.docker.com/r/monogramm/docker-axelor-development-kit/)
 
 **This container is still in development and shouldn't be considered production ready!**
 
