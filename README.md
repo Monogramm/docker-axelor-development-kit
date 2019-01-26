@@ -20,7 +20,8 @@ Axelor Development Kit (ADK) is an open source Java framework to create modern b
 
 https://hub.docker.com/r/monogramm/docker-axelor-development-kit/
 
-* `4.1.8` `4.1` `4` `latest`
+* `5.0.11` `5.0` `5` `latest`
+* `4.1.8` `4.1` `4`
 
 ## How to use this image ?
 

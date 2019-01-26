@@ -12,7 +12,7 @@ dockerRepo="monogramm/docker-axelor-development-kit"
 # latests=( $( curl -fsSL 'https://api.github.com/repos/axelor/axelor-development-kit/tags' |tac|tac| \
 # 	grep -oE '[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+' | \
 # 	sort -urV ) )
-latests=( "4.1.8" )
+latests=( "4.1.8" "5.0.11" )
 
 # FIXME Remove versions prior to 4.0 due to following error:
 # Could not find org.apache.directory.jdbm:apacheds-jdbm1:2.0.0-M3-SNAPSHOT.
@@ -41,7 +41,7 @@ for latest in "${latests[@]}"; do
 		dir="images/$version"
 		mkdir -p "$dir"
 
-		template="Dockerfile.template"
+		template="Dockerfile.alpine.template"
 		cp "$template" "$dir/Dockerfile"
 
 		# Replace the variables.

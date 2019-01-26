@@ -25,4 +25,5 @@ notifications:
   email: false
 
 env: # Environments
+    - VERSION=5.0
     - VERSION=4.1

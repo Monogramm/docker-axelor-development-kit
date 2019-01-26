@@ -1,8 +1,8 @@
 FROM gradle:jdk-alpine
 
-LABEL maintainer="Mathieu BRUNOT <mathieu.brunot@monogramm.io>"
+LABEL maintainer="mathieu.brunot at monogramm dot io"
 
-ENV ADK_VERSION %%ADK_VERSION%%
+ENV ADK_VERSION 5.0.11
 ENV AXELOR_HOME /opt/adk
 
 # Switch to root
